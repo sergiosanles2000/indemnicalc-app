@@ -79,11 +79,13 @@ document.addEventListener('DOMContentLoaded', () => {
       maxMonthlyCaps = 0;
     }
 
-    // Days entitled to compensation
+    // Days and Amount entitled to compensation (Estatuto de los Trabajadores & Tribunal Supremo)
     const compensatedDaysCalculated = (totalTenureMonths / 12) * daysPerYear;
-    const maxDaysAllowed = maxMonthlyCaps * 30;
-    const finalCompensatedDays = maxMonthlyCaps > 0 ? Math.min(compensatedDaysCalculated, maxDaysAllowed) : 0;
-    const severancePay = finalCompensatedDays * dailySalary;
+    const monthlySalary = annualGross / 12;
+    const maxLegalCapAmount = maxMonthlyCaps * monthlySalary;
+    const rawSeverance = compensatedDaysCalculated * dailySalary;
+    const severancePay = maxMonthlyCaps > 0 ? Math.min(rawSeverance, maxLegalCapAmount) : 0;
+    const finalCompensatedDays = dailySalary > 0 ? (severancePay / dailySalary) : 0;
 
     // 3. Finiquito Calculation (Settlement for pending accrued amounts)
     const vacationDays = parseFloat(vacationDaysInput.value) || 0;
