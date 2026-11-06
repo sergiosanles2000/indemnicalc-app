@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Calculadora de Indemnización por Despido y Finiquito 2026 | IndemniCalc</title>
   <meta name="description" content="Calcula con precisión legal tu indemnización por despido improcedente (33 días) u objetivo (20 días), salario día oficial y finiquito.">
+  <meta name="enterprise-site-slug" content="indemnicalc">
   <link rel="canonical" href="https://sergiosanles2000.github.io/indemnicalc-app/index.html">
   
   <!-- Open Graph / Social Sharing -->
@@ -19,8 +20,23 @@
   <meta name="twitter:title" content="Calculadora de Indemnización por Despido y Finiquito 2026">
   <meta name="twitter:description" content="Calcula con precisión legal tu indemnización por despido improcedente (33 días) u objetivo (20 días), salario día oficial y finiquito.">
 
-  <!-- Google AdSense Tag placeholder (Ready to activate upon publisher approval) -->
-  <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script> -->
+  <!-- Google Consent Mode v2 (RGPD / ePrivacy: Default denied before explicit user action) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'analytics_storage': 'denied',
+      'wait_for_update': 500
+    });
+  </script>
+  <!-- Google Analytics 4 (gtag.js): Preparado para activacion via core/analytics_config.json o GA_MEASUREMENT_ID -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script> -->
+
+  <!-- Google AdSense: Listo para activacion tras aprobacion de la cuenta -->
+  <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script> -->
 
   <link rel="stylesheet" href="style.css">
   
@@ -60,6 +76,14 @@
         "@type": "Answer",
         "text": "Sí, está exenta de IRPF hasta el límite legal del Estatuto de los Trabajadores con un tope máximo de 180.000 €."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "¿De qué plazo dispongo para impugnar un despido ante el SMAC?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Dispones de un plazo improrrogable de 20 días hábiles desde la fecha de efectos del despido para presentar la papeleta de conciliación."
+      }
     }
   ]
 }
@@ -89,10 +113,10 @@
   <!-- Main Content Area -->
   <main class="container" style="padding-top: 1.5rem; padding-bottom: 3rem;">
     
-        <div class="ad-slot-wrapper">
+        <div class="ad-slot-wrapper ad-slot-header-wrapper" role="region" aria-label="Espacio publicitario superior">
           <span class="ad-label">Publicidad</span>
           <div class="ad-slot ad-slot-leaderboard" data-slot="header-leaderboard">
-            <span>Espacio Publicitario Disponible &bull; Formato Leaderboard 728x90 / Responsive</span>
+            <span class="ad-placeholder-text">Espacio Publicitario Disponible &bull; Formato Leaderboard Responsivo 728x90 / 320x100</span>
           </div>
         </div>
         
@@ -239,8 +263,77 @@
       </div>
     </div>
 
+    
+    <!-- Commercial Affiliate Integration (CPL / CPA Non-Intrusive Partner Card) -->
+    <section class="affiliate-card" id="partners-recommendation" role="region" aria-label="Recomendación de servicios profesionales">
+      <div class="affiliate-header">
+        <span class="affiliate-badge">Defensa Jurídica Laboral Especializada</span>
+        <span class="affiliate-disclosure-badge">Colaboración Patrocinada</span>
+      </div>
+      <div class="affiliate-body">
+        <h3 class="affiliate-title">¿Despido Objetivo o Disciplinario? Reclama tus 33 Días por Año ante el SMAC</h3>
+        <p class="affiliate-desc">Recuerda que solo dispones de 20 días hábiles para impugnar. Abogados laboralistas colegiados revisan tu carta de despido y finiquito a éxito.</p>
+        
+        <div class="affiliate-partners">
+          <span class="affiliate-partners-label">Entidades colaboradoras:</span>
+          <div class="affiliate-partner-tags"><span class="partner-tag">Despachos Laboralistas Colegiados</span><span class="partner-tag">Especialistas en SMAC y Juzgados de lo Social</span></div>
+        </div>
+        
+        <div class="affiliate-cta-box">
+          <a href="#severance-form" class="btn-affiliate" target="_blank" rel="sponsored nofollow noopener">
+            Revisar mi Carta de Despido Gratis &rarr;
+          </a>
+          <span class="affiliate-cta-subtext">Primera valoración gratuita en 24h • Solo cobran si tú ganas más indemnización</span>
+        </div>
+      </div>
+      <div class="affiliate-footer">
+        <p class="affiliate-legal-note">Aviso legal: IndemniCalc es una herramienta orientativa y puede mostrar colaboraciones con despachos de abogados laboralistas independientes.</p>
+      </div>
+    </section>
+    
+
+    <!-- Section 1.5: Comparative Table of Severance Modalities -->
+    <div class="card" style="margin-bottom: 3rem;">
+      <div class="card-header">
+        <h2 class="card-title">Tabla Oficial de Indemnizaciones según el Estatuto de los Trabajadores (2026)</h2>
+        <p class="card-subtitle">Comparativa de días por año trabajado, topes legales y derecho a prestación por desempleo (SEPE).</p>
+      </div>
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Causa de Extinción / Tipo de Despido</th>
+              <th>Días por Año</th>
+              <th>Tope Máximo Legal</th>
+              <th>¿Derecho a Paro (SEPE)?</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Despido Improcedente (Post 12/02/2012)</strong></td><td>33 días / año</td><td>24 mensualidades (720 días)</td><td class="status-positive">Sí (100% inmediato)</td></tr>
+            <tr><td><strong>Despido Improcedente Mixto (Pre 12/02/2012)</strong></td><td>45 / 33 días</td><td>hasta 42 mensualidades</td><td class="status-positive">Sí (100% inmediato)</td></tr>
+            <tr><td><strong>Despido Objetivo / ERE (Art. 51 y 52 ET)</strong></td><td>20 días / año</td><td>12 mensualidades (360 días)</td><td class="status-positive">Sí (más 15 días preaviso)</td></tr>
+            <tr><td><strong>Modificación Sustancial (Art. 41 ET)</strong></td><td>20 días / año</td><td>9 mensualidades</td><td class="status-positive">Sí</td></tr>
+            <tr><td><strong>Incumplimiento Grave Empresarial (Art. 50 ET)</strong></td><td>33 días / año</td><td>24 mensualidades</td><td class="status-positive">Sí (vía judicial)</td></tr>
+            <tr><td><strong>Fin de Contrato Temporal (Art. 49.1.c ET)</strong></td><td>12 días / año</td><td>Sin tope específico</td><td class="status-positive">Sí</td></tr>
+            <tr><td><strong>Despido Disciplinario Procedente</strong></td><td>0 días (solo finiquito)</td><td>0 mensualidades</td><td class="status-positive">Sí (situación legal desempleo)</td></tr>
+            <tr><td><strong>Baja Voluntaria / Dimisión</strong></td><td>0 días (solo finiquito)</td><td>0 mensualidades</td><td class="status-negative">No</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="context-crosslink-card">
+        <div class="context-crosslink-content">
+          <strong>💼 ¿Vas a negociar un nuevo empleo o emprender como autónomo tras tu despido?</strong>
+          <p>Calcula tu sueldo neto en tu próxima oferta laboral o simula la Tarifa Plana de 80 €/mes y tramos RETA si decides capitalizar el paro.</p>
+        </div>
+        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+          <a href="https://sergiosanles2000.github.io/calcula-tu-salario/" class="context-crosslink-btn">Calcular Sueldo Neto &rarr;</a>
+          <a href="https://sergiosanles2000.github.io/cuotaautonomos-app/" class="context-crosslink-btn" style="background: var(--text-main);">Simular Cuota Autónomos &rarr;</a>
+        </div>
+      </div>
+    </div>
+
     <!-- Section 2: Authoritative Legal Guide -->
-    <article class="editorial-section">
+    <article class="editorial-section" id="editorial-guide">
       <h2>Guía Legal: Cómo Calcular tu Finiquito e Indemnización por Despido en 2026</h2>
       <p>La extinción del contrato de trabajo genera profundas dudas laborales y financieras. Entender con exactitud cómo se calcula el salario día y la diferencia entre finiquito e indemnización es vital para defender tus derechos como trabajador.</p>
 
@@ -329,6 +422,16 @@
             <p>Sí. La indemnización por despido está totalmente exenta de IRPF hasta los límites fijados con carácter obligatorio en el Estatuto de los Trabajadores (33 días por año para improcedente y 20 días para objetivo), con un límite absoluto máximo de 180.000 €. Cualquier cuantía que supere ese tope tributará en la Declaración de la Renta.</p>
           </div>
         </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>¿Cuántos días de preaviso debe darme la empresa en un despido objetivo?</span>
+            <span>+</span>
+          </button>
+          <div class="faq-answer">
+            <p>En el despido por causas objetivas (art. 53 ET), la empresa debe conceder un plazo de preaviso de <strong>15 días naturales</strong>. Si no te concede dicho preaviso, está obligada a abonarte en el finiquito el salario íntegro correspondiente a esos 15 días no preavisados.</p>
+          </div>
+        </div>
       </div>
     </section>
     
@@ -337,6 +440,66 @@
   <!-- Site Footer -->
   <footer class="site-footer">
     <div class="container">
+      
+      <!-- Strategic Cross-Linking Network (Ecosistema de Herramientas Gratuitas) -->
+      <div class="footer-network" role="navigation" aria-label="Red de calculadoras especializadas">
+        <div class="footer-network-header">
+          <div class="footer-network-title">🌐 Ecosistema Digital de Calculadoras y Simuladores Oficiales</div>
+          <p class="footer-network-subtitle">Herramientas financieras, laborales, fiscales y de salud de acceso libre y cálculo instantáneo en tu navegador.</p>
+        </div>
+        <div class="network-grid">
+          <a href="https://sergiosanles2000.github.io/hipotecalia-app/" class="network-card" title="Hipotecalia - Simulador de hipotecas, cuadro de amortización francés y gastos de compraventa.">
+            <div>
+              <div class="network-card-top">
+                <span class="network-card-brand"><span>🏠</span> Hipotecalia</span>
+                <span class="network-card-tag">Inmobiliario</span>
+              </div>
+              <p class="network-card-desc">Simulador de hipotecas, cuadro de amortización francés y gastos de compraventa.</p>
+            </div>
+            <span class="network-card-action">Abrir calculadora &rarr;</span>
+          </a>
+          <a href="https://sergiosanles2000.github.io/calcula-tu-salario/" class="network-card" title="CalculaTuSalario - Calculadora de sueldo bruto a neto en 12/14 pagas, tramos IRPF 2026 y coste empresa.">
+            <div>
+              <div class="network-card-top">
+                <span class="network-card-brand"><span>💼</span> CalculaTuSalario</span>
+                <span class="network-card-tag">Nóminas & IRPF</span>
+              </div>
+              <p class="network-card-desc">Calculadora de sueldo bruto a neto en 12/14 pagas, tramos IRPF 2026 y coste empresa.</p>
+            </div>
+            <span class="network-card-action">Abrir calculadora &rarr;</span>
+          </a>
+          <a href="index.html" class="network-card is-current" title="IndemniCalc - Cálculo legal de indemnización por despido, salario diario oficial y liquidación de finiquito.">
+            <div>
+              <div class="network-card-top">
+                <span class="network-card-brand"><span>⚖️</span> IndemniCalc</span>
+                <span class="network-card-tag">Portal Actual</span>
+              </div>
+              <p class="network-card-desc">Cálculo legal de indemnización por despido, salario diario oficial y liquidación de finiquito.</p>
+            </div>
+            <span class="network-card-action">Estás aquí</span>
+          </a>
+          <a href="https://sergiosanles2000.github.io/cuotaautonomos-app/" class="network-card" title="CuotaAutónomos - Simulador oficial de cuotas por ingresos reales (RDL 13/2022) y regularización TGSS.">
+            <div>
+              <div class="network-card-top">
+                <span class="network-card-brand"><span>📊</span> CuotaAutónomos</span>
+                <span class="network-card-tag">Autónomos RETA</span>
+              </div>
+              <p class="network-card-desc">Simulador oficial de cuotas por ingresos reales (RDL 13/2022) y regularización TGSS.</p>
+            </div>
+            <span class="network-card-action">Abrir calculadora &rarr;</span>
+          </a>
+          <a href="https://sergiosanles2000.github.io/macronutri-calc/" class="network-card" title="MacroNutri - Calculadora científica de gasto calórico TDEE, déficit energético y reparto de macronutrientes.">
+            <div>
+              <div class="network-card-top">
+                <span class="network-card-brand"><span>🥗</span> MacroNutri</span>
+                <span class="network-card-tag">Salud & Ciencia</span>
+              </div>
+              <p class="network-card-desc">Calculadora científica de gasto calórico TDEE, déficit energético y reparto de macronutrientes.</p>
+            </div>
+            <span class="network-card-action">Abrir calculadora &rarr;</span>
+          </a>
+        </div>
+      </div>
       <div class="footer-grid">
         <div class="footer-col">
           <h4>IndemniCalc</h4>
@@ -375,6 +538,21 @@
       <button id="cookie-reject" class="btn-cookie">Rechazar no esenciales</button>
     </div>
   </div>
+
+  
+  <!-- Sticky Bottom Anchor Ad (Better Ads Standards: dismissible, height < 30% viewport) -->
+  <div id="sticky-bottom-ad" class="ad-sticky-container" role="region" aria-label="Anuncio fijo inferior" style="display: none;">
+    <div class="ad-sticky-inner">
+      <div class="ad-sticky-header">
+        <span class="ad-label">Publicidad</span>
+        <button id="close-sticky-ad" class="ad-sticky-close" aria-label="Cerrar anuncio">&times;</button>
+      </div>
+      <div class="ad-slot ad-slot-sticky" data-slot="sticky-anchor">
+        <span class="ad-placeholder-text">Anuncio Fijo Inferior &bull; Formato Anchor Responsivo</span>
+      </div>
+    </div>
+  </div>
+        
 
   <script src="common.js"></script>
   <script src="app.js"></script>
