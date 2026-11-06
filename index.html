@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Indemnización por Despido y Finiquito 2026 | IndemniCalc</title>
+  <meta name="description" content="Calcula con precisión legal tu indemnización por despido improcedente (33 días) u objetivo (20 días), salario día oficial y finiquito.">
+  <link rel="canonical" href="https://sergiosanles2000.github.io/indemnicalc-app/index.html">
+  
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sergiosanles2000.github.io/indemnicalc-app/index.html">
+  <meta property="og:title" content="Calculadora de Indemnización por Despido y Finiquito 2026 | IndemniCalc">
+  <meta property="og:description" content="Calcula con precisión legal tu indemnización por despido improcedente (33 días) u objetivo (20 días), salario día oficial y finiquito.">
+  <meta property="og:site_name" content="IndemniCalc">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Calculadora de Indemnización por Despido y Finiquito 2026">
+  <meta name="twitter:description" content="Calcula con precisión legal tu indemnización por despido improcedente (33 días) u objetivo (20 días), salario día oficial y finiquito.">
+
+  <!-- Google AdSense Tag placeholder (Ready to activate upon publisher approval) -->
+  <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script> -->
+
+  <link rel="stylesheet" href="style.css">
+  
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "IndemniCalc - Calculadora de Finiquito e Indemnización por Despido",
+  "url": "https://sergiosanles2000.github.io/indemnicalc-app/index.html",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "EUR"
+  },
+  "description": "Calcula tu indemnización por despido improcedente o por causas objetivas, salario diario oficial y finiquito de vacaciones devengadas."
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cuál es la diferencia entre finiquito e indemnización?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El finiquito liquida salarios ya trabajados y vacaciones pendientes que siempre se cobran, mientras que la indemnización compensa el perjuicio del despido involuntario."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Está exenta de IRPF la indemnización por despido?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, está exenta de IRPF hasta el límite legal del Estatuto de los Trabajadores con un tope máximo de 180.000 €."
+      }
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+
+  <!-- Site Navigation -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo">
+        <span>⚖️</span>
+        <span>IndemniCalc</span>
+        <span class="brand-badge">Laboral & Legal</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#severance-form">Calculadora Despido</a></li><li><a href="#vacationDays">Finiquito</a></li><li><a href="#editorial-guide">Guía Legal</a></li>
+        <li>
+          <button id="theme-toggle" class="theme-toggle-btn" aria-label="Cambiar tema de color">
+            🌓 Tema
+          </button>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Main Content Area -->
+  <main class="container" style="padding-top: 1.5rem; padding-bottom: 3rem;">
+    
+        <div class="ad-slot-wrapper">
+          <span class="ad-label">Publicidad</span>
+          <div class="ad-slot ad-slot-leaderboard" data-slot="header-leaderboard">
+            <span>Espacio Publicitario Disponible &bull; Formato Leaderboard 728x90 / Responsive</span>
+          </div>
+        </div>
+        
+    
+    <!-- Hero Header -->
+    <section class="hero">
+      <span class="hero-badge">Actualizado Estatuto de los Trabajadores 2026</span>
+      <h1>Calculadora de Finiquito e Indemnización por Despido</h1>
+      <p>Calcula con precisión legal tu indemnización por despido (improcedente o por causas objetivas), días compensados, salario diario y finiquito de vacaciones pendientes.</p>
+    </section>
+
+    <!-- Main Tool Grid -->
+    <div class="app-grid">
+      <!-- Calculator Inputs -->
+      <div class="card">
+        <div class="card-header">
+          <h2 class="card-title">1. Datos Salariales y Tipo de Despido</h2>
+          <p class="card-subtitle">Introduce tu remuneración y causa de extinción del contrato de trabajo.</p>
+        </div>
+        
+        <form id="severance-form" onsubmit="event.preventDefault();">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div class="form-group">
+              <label class="form-label" for="salaryType">Tipo de salario</label>
+              <select id="salaryType" class="form-control">
+                <option value="annual" selected>Salario Bruto Anual</option>
+                <option value="monthly">Salario Bruto Mensual</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="paysCount">Número de pagas</label>
+              <select id="paysCount" class="form-control">
+                <option value="12" selected>12 Pagas (Prorrateadas)</option>
+                <option value="14">14 Pagas (Con Extras)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="salaryAmount">
+              <span>Importe Salarial Bruto (€)</span>
+              <span class="form-help">Incluyendo pagas extras y complementos fijos</span>
+            </label>
+            <div class="input-group">
+              <input type="number" id="salaryAmount" class="form-control" value="32000" min="5000" step="500">
+              <span class="input-addon">€</span>
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div class="form-group">
+              <label class="form-label" for="yearsWorked">Años de antigüedad</label>
+              <input type="number" id="yearsWorked" class="form-control" value="4" min="0" max="45" step="1">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="monthsWorked">Meses adicionales</label>
+              <input type="number" id="monthsWorked" class="form-control" value="6" min="0" max="11" step="1">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="dismissalType">Tipo de Despido o Causa de Extinción</label>
+            <select id="dismissalType" class="form-control">
+              <option value="improcedente_post2012" selected>Despido Improcedente (33 días/año, máx. 24 mensualidades)</option>
+              <option value="objetivo">Despido Objetivo / ERE (20 días/año, máx. 12 mensualidades)</option>
+              <option value="temporal">Fin de Contrato Temporal (12 días/año)</option>
+              <option value="improcedente_pre2012">Despido Improcedente con antigüedad anterior a Feb 2012 (45/33 días)</option>
+              <option value="dimision">Baja Voluntaria / Dimisión (0 días indemnización)</option>
+            </select>
+          </div>
+
+          <div class="card-header" style="margin: 1.5rem 0 1rem; padding-bottom: 0.5rem;">
+            <h3 style="font-size: 1.05rem; font-weight: 700;">2. Conceptos Pendientes del Finiquito</h3>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div class="form-group">
+              <label class="form-label" for="vacationDays">Días vacaciones no disfrutadas</label>
+              <input type="number" id="vacationDays" class="form-control" value="5" min="0" max="60" step="0.5">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="pendingMonthDays">Días trabajados en el mes final</label>
+              <input type="number" id="pendingMonthDays" class="form-control" value="15" min="0" max="31" step="1">
+            </div>
+          </div>
+        </form>
+
+        <!-- In-Calculator Ad Slot -->
+        <div class="ad-slot-wrapper" style="margin: 1.5rem 0 0;">
+          <span class="ad-label">Publicidad</span>
+          <div class="ad-slot" data-slot="in-calc-severance">
+            <span>Espacio Publicitario en Simulador &bull; Abogados Laboralistas / Asesoría Legal</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Live Results Summary -->
+      <div class="card" style="display: flex; flex-direction: column; justify-content: space-between;">
+        <div>
+          <div class="card-header">
+            <h2 class="card-title">Liquidación Total Estimada</h2>
+            <p class="card-subtitle">Suma de la indemnización por despido y finiquito de conceptos devengados.</p>
+          </div>
+
+          <div class="kpi-card" style="margin-bottom: 1rem;">
+            <div class="kpi-label">Total a Percibir (Indemnización + Finiquito)</div>
+            <div class="kpi-val highlight" id="resTotalCompensation">0,00 €</div>
+            <p class="form-help" style="margin-top: 0.35rem;">Importe global antes de retención fiscal del finiquito</p>
+          </div>
+
+          <div class="kpi-grid">
+            <div class="kpi-card">
+              <div class="kpi-label">Indemnización Despido</div>
+              <div class="kpi-val" style="color: var(--primary);" id="resSeverancePay">0,00 €</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-label">Finiquito Pendiente</div>
+              <div class="kpi-val" id="resFiniquitoTotal">0,00 €</div>
+            </div>
+          </div>
+
+          <div class="table-responsive" style="margin: 1rem 0 0;">
+            <table class="data-table">
+              <tbody>
+                <tr>
+                  <td><strong>Salario Diario Oficial</strong></td>
+                  <td id="resDailySalary" style="text-align: right; font-weight: 600;">0,00 € / día</td>
+                </tr>
+                <tr>
+                  <td><strong>Días Indemnizados de Salario</strong></td>
+                  <td id="resDaysCompensated" style="text-align: right; font-weight: 600;">0,0 días</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="callout" style="margin-top: 1rem;">
+            <strong>Tratamiento Fiscal (IRPF):</strong> <span id="resTaxExemptInfo">-</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 2: Authoritative Legal Guide -->
+    <article class="editorial-section">
+      <h2>Guía Legal: Cómo Calcular tu Finiquito e Indemnización por Despido en 2026</h2>
+      <p>La extinción del contrato de trabajo genera profundas dudas laborales y financieras. Entender con exactitud cómo se calcula el salario día y la diferencia entre finiquito e indemnización es vital para defender tus derechos como trabajador.</p>
+
+      <h3>1. Diferencia Fundamental entre Finiquito e Indemnización</h3>
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Concepto</th>
+              <th>Naturaleza Jurídica</th>
+              <th>¿Se cobra siempre?</th>
+              <th>Tributación IRPF</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Finiquito</strong></td>
+              <td>Abono de salarios ya devengados y no liquidados (días del mes, pagas extras, vacaciones pendientes).</td>
+              <td><strong>Sí</strong>, siempre se tiene derecho al finiquito, incluso en dimisión voluntaria o despido disciplinario procedente.</td>
+              <td>Cotiza a la Seguridad Social y tributa en IRPF como salario habitual.</td>
+            </tr>
+            <tr>
+              <td><strong>Indemnización</strong></td>
+              <td>Compensación económica por el perjuicio de la pérdida involuntaria del puesto de trabajo.</td>
+              <td>Solo en despidos objetivos, improcedentes, ERE o fin de contrato temporal. <em>No en dimisión ni en despido procedente disciplinario</em>.</td>
+              <td><strong>Exenta de IRPF</strong> hasta el límite legal del Estatuto de los Trabajadores (máx. 180.000 €).</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>2. ¿Cómo se calcula el Salario Día?</h3>
+      <p>El salario día es la base matemática sobre la que se proyectan los días de indemnización. Se obtiene sumando todas las retribuciones brutas percibidas en los últimos doce meses (salario base, pluses fijos, pagas extras devengadas) y dividiendo el resultado entre 365 días naturales:</p>
+      <div class="callout">
+        <code>Salario Diario = Salario Bruto Anual / 365</code>
+      </div>
+
+      <h3>3. ¿Qué hacer en el momento de la entrega de la carta de despido?</h3>
+      <p>Los abogados laboralistas recomiendan unánimemente seguir estas pautas:</p>
+      <ul>
+        <li><strong>Firma siempre "No conforme":</strong> Escribe de tu puño y letra la mención <em>"No conforme"</em> junto a la fecha real del día antes de firmar cualquier documento que te entregue la empresa.</li>
+        <li><strong>Exige copia sellada:</strong> Quédate con una copia idéntica firmada y sellada por la empresa.</li>
+        <li><strong>Plazo improrrogable de 20 días hábiles:</strong> Dispones únicamente de 20 días hábiles (excluyendo sábados, domingos y festivos) para presentar papeleta de conciliación ante el Servicio de Mediación, Arbitraje y Conciliación (SMAC).</li>
+      </ul>
+    </article>
+
+    <!-- Mid-article Ad Slot -->
+    <div class="ad-slot-wrapper">
+      <span class="ad-label">Publicidad</span>
+      <div class="ad-slot ad-slot-leaderboard" data-slot="mid-guide-severance">
+        <span>Espacio de Publicidad Contextual &bull; Asesorías Jurídicas / Reclamación de Despidos</span>
+      </div>
+    </div>
+
+    <!-- Section 3: FAQ -->
+    <section class="editorial-section">
+      <h2>Preguntas Frecuentes sobre Despidos y Finiquito (FAQ)</h2>
+      
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>¿Tengo derecho a paro si me despiden?</span>
+            <span>+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Sí. Tanto en el despido objetivo como en el despido improcedente o fin de contrato temporal, el trabajador queda en <strong>situación legal de desempleo</strong>. Si has cotizado un mínimo de 360 días en los últimos 6 años, podrás solicitar la prestación contributiva por desempleo ante el SEPE. <em>Nota: Si te marchas voluntariamente (dimisión), no tienes derecho a paro.</em></p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>¿Qué ocurre si la empresa no me entrega el finiquito el último día?</span>
+            <span>+</span>
+          </button>
+          <div class="faq-answer">
+            <p>La empresa está obligada por ley a poner a disposición la propuesta de finiquito y la indemnización en la fecha de efectos del despido. El retraso culpable en el pago de salarios devenga un interés por mora del 10% anual (artículo 29.3 del Estatuto de los Trabajadores) que puede reclamarse judicialmente.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>¿Está exenta de IRPF la indemnización por despido?</span>
+            <span>+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Sí. La indemnización por despido está totalmente exenta de IRPF hasta los límites fijados con carácter obligatorio en el Estatuto de los Trabajadores (33 días por año para improcedente y 20 días para objetivo), con un límite absoluto máximo de 180.000 €. Cualquier cuantía que supere ese tope tributará en la Declaración de la Renta.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>IndemniCalc</h4>
+          <p style="font-size: 0.9rem; margin-bottom: 1rem;">Calculadora precisa de indemnización por despido, salario diario oficial y finiquito.</p>
+          <p class="form-help">&copy; 2026 IndemniCalc. Todos los derechos reservados.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Herramientas</h4>
+          <ul class="footer-links">
+            <li><a href="#severance-form">Calculadora Despido</a></li><li><a href="#vacationDays">Finiquito</a></li><li><a href="#editorial-guide">Guía Legal</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal & Privacidad</h4>
+          <ul class="footer-links">
+            <li><a href="privacidad.html">Política de Privacidad</a></li>
+            <li><a href="terminos.html">Términos de Uso</a></li>
+            <li><a href="cookies.html">Política de Cookies</a></li>
+            <li><a href="aviso-legal.html">Aviso Legal (LSSI)</a></li>
+            <li><a href="contacto.html">Contacto y Soporte</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Herramienta divulgativa independiente. Los resultados son estimaciones basadas en normativas públicas vigentes.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- GDPR / ePrivacy Cookie Consent Banner -->
+  <div id="cookie-banner" role="dialog" aria-modal="true" aria-labelledby="cookie-title">
+    <h4 id="cookie-title" style="margin-bottom: 0.5rem; font-size: 1rem;">Privacidad y Cookies</h4>
+    <p>Utilizamos cookies propias y de terceros para optimizar la experiencia de navegación, analizar el tráfico y personalizar la publicidad conforme a nuestras <a href="privacidad.html">políticas</a>.</p>
+    <div class="cookie-actions">
+      <button id="cookie-accept" class="btn-cookie btn-cookie-accept">Aceptar todas</button>
+      <button id="cookie-reject" class="btn-cookie">Rechazar no esenciales</button>
+    </div>
+  </div>
+
+  <script src="common.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
